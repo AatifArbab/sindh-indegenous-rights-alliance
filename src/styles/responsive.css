@@ -1,0 +1,298 @@
+@media (max-width: 1100px) {
+  :root {
+    --section-space: 75px;
+  }
+
+  .brand {
+    max-width: 310px;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .nav-menu {
+    gap: 10px;
+  }
+
+  .nav-link {
+    padding-inline: 7px;
+    font-size: 0.82rem;
+  }
+
+  .mission-grid,
+  .objectives-grid,
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .top-bar {
+    display: none;
+  }
+
+  .navbar-content {
+    min-height: 75px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 20px;
+    border-top: 1px solid var(--border);
+    background: var(--white);
+    box-shadow: var(--shadow-medium);
+  }
+
+  .nav-menu-open {
+    display: block;
+  }
+
+  .nav-links {
+    display: block;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 13px 10px;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .membership-button {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .hero-section {
+    min-height: 590px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .about-section-grid,
+  .about-introduction-grid,
+  .environment-intro-grid,
+  .contact-grid,
+  .membership-page-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-section-image {
+    max-width: 650px;
+  }
+
+  .news-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .membership-cta-content {
+    grid-template-columns: auto 1fr;
+  }
+
+  .membership-cta-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 115px;
+  }
+
+  .news-filters {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .news-search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  :root {
+    --section-space: 60px;
+  }
+
+  .container {
+    width: min(100% - 28px, var(--container-width));
+  }
+
+  .brand-logo {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+    font-size: 0.7rem;
+  }
+
+  .brand-name {
+    font-size: 0.76rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .hero-section {
+    min-height: 560px;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-buttons .button {
+    width: 100%;
+  }
+
+  .page-hero {
+    min-height: 320px;
+    padding-block: 60px;
+  }
+
+  .section-title {
+    margin-bottom: 35px;
+  }
+
+  .about-section-grid,
+  .about-introduction-grid {
+    gap: 35px;
+  }
+
+  .about-section-image img,
+  .about-introduction-image img {
+    min-height: 350px;
+  }
+
+  .about-experience-box {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .mission-grid,
+  .objectives-grid,
+  .team-grid,
+  .news-grid,
+  .projects-grid,
+  .mission-vision-grid,
+  .environment-values,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-image-wrapper,
+  .project-image-wrapper {
+    height: 220px;
+  }
+
+  .membership-cta {
+    text-align: center;
+  }
+
+  .membership-cta-content {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-cta-icon {
+    margin-inline: auto;
+  }
+
+  .membership-cta-actions {
+    grid-column: auto;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .contact-form-wrapper,
+  .membership-form-wrapper {
+    padding: 24px 18px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding-block: 55px;
+  }
+
+  .footer-bottom-content {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 20px;
+  }
+
+  .footer-legal-links {
+    flex-wrap: wrap;
+  }
+
+  .article-header {
+    padding-block: 55px;
+  }
+
+  .article-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .article-share {
+    flex-wrap: wrap;
+  }
+
+  .not-found-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .category-buttons {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-name {
+    max-width: 175px;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .button {
+    padding-inline: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

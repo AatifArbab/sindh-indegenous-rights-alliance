@@ -87,7 +87,7 @@ const About = () => {
           <div className="about-introduction-image">
             {/* Public folder se direct '/' path ke sath image render hogi */}
             <img
-              src="/Dashboard1.jpg" 
+              src="/picture.jpeg" 
               alt="Sindh Indigenous Rights Alliance Dashboard"
             />
           </div>

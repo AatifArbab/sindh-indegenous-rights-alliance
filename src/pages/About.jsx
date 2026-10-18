@@ -50,10 +50,11 @@ const About = () => {
             </p>
           </div>
 
+          {/* Our Story section mein about.jfif image */}
           <div className="about-introduction-image">
             <img
-              src="/images/team/about-community.jpg"
-              alt="Community members working together"
+              src="/picture2.jpeg"
+              alt="Our Story - Sindh Indigenous Rights Alliance"
               loading="lazy"
             />
           </div>
@@ -64,6 +65,7 @@ const About = () => {
 
       <Objectives />
 
+      {/* Iss component mein Central aur Karachi Chapter ki team render hogi */}
       <TeamSection />
 
       <MembershipCTA />

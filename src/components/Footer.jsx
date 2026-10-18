@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import {
+  FaCode,
   FaEnvelope,
   FaFacebookF,
   FaInstagram,
@@ -8,11 +9,71 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
+/* Developer credit. Add a link (portfolio, LinkedIn, WhatsApp...) in
+   DEVELOPER_URL to make the name clickable. Leave it empty for plain text. */
+const DEVELOPER_NAME = "Atif Arbab";
+const DEVELOPER_URL = "";
+
+const creditStyles = `
+.footer-credit {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 0;
+}
+.footer-credit-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-credit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 0.8rem;
+  color: #c8a24a;
+  background: rgba(200, 162, 74, 0.14);
+  border-radius: 50%;
+}
+.footer-credit-name {
+  position: relative;
+  font-weight: 700;
+  color: #c8a24a;
+  text-decoration: none;
+}
+.footer-credit-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+a.footer-credit-name:hover::after {
+  transform: scaleX(1);
+}
+@media (max-width: 480px) {
+  .footer-credit-inner { font-size: 0.82rem; }
+}
+`;
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="site-footer">
+      <style>{creditStyles}</style>
+
       <div className="container footer-grid">
         {/* Organization Information */}
         <div className="footer-about">
@@ -100,8 +161,8 @@ const Footer = () => {
             </li>
 
             <li>
-  <Link to="/indigenous">Indigenous Communities</Link>
-</li>
+              <Link to="/indigenous">Indigenous Communities</Link>
+            </li>
 
             <li>
               <Link to="/news">Community Updates</Link>
@@ -127,17 +188,13 @@ const Footer = () => {
             <p>
               <FaPhoneAlt aria-hidden="true" />
 
-              <a href="tel:+923001234567">
-                +92 300 1234567
-              </a>
+              <a href="tel:+923001234567">+92 300 1234567</a>
             </p>
 
             <p>
               <FaEnvelope aria-hidden="true" />
 
-              <a href="mailto:info@sindhrights.org">
-                info@sindhrights.org
-              </a>
+              <a href="mailto:info@sindhrights.org">info@sindhrights.org</a>
             </p>
           </address>
         </div>
@@ -151,9 +208,32 @@ const Footer = () => {
             reserved.
           </p>
 
-          <p>
-            Rights • Justice • Environment
-          </p>
+          <p>Rights • Justice • Environment</p>
+        </div>
+
+        {/* Developer Credit */}
+        <div className="footer-credit">
+          <div className="container footer-credit-inner">
+            <span className="footer-credit-icon" aria-hidden="true">
+              <FaCode />
+            </span>
+
+            <span>
+              Website designed &amp; developed by{" "}
+              {DEVELOPER_URL ? (
+                <a
+                  href={DEVELOPER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-credit-name"
+                >
+                  {DEVELOPER_NAME}
+                </a>
+              ) : (
+                <strong className="footer-credit-name">{DEVELOPER_NAME}</strong>
+              )}
+            </span>
+          </div>
         </div>
       </div>
     </footer>

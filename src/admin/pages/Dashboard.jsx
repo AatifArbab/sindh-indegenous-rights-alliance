@@ -174,11 +174,11 @@ const Dashboard = () => {
             Manage existing news
           </Link>
 
-          <Link to="/admin/messages">
+          <Link to="/admin/contact-messages">
             Read contact messages
           </Link>
 
-          <Link to="/admin/memberships">
+          <Link to="/admin/membership-applications">
             Review memberships
           </Link>
         </div>
